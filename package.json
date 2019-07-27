@@ -14,7 +14,7 @@
     "pug": "^2.0.4"
   },
   "description": "calculator using node.js and expres.js",
-  "main": "app.js",
+  "main": "./bin/www",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pho3niix/calculator.git"
