@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.status(200).json({message: 'escuchando'})
 });
 
-router.get('/users/hola', function(req, res, next) {
+router.get('/hola', function(req, res, next) {
   res.status(200).json(
     {
       message: "probando peticiones en postman"

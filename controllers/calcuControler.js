@@ -1,26 +1,47 @@
 // arithmetic functions
 
-const Maths = {};
+const math = {};
 
-// maths.add = ()=>{
 
-// }
+math.calculator = (req, res)=>{
+    var a = parseInt(req.param('a'));
+    var b = parseInt(req.param('b'));
+    var c = 0;
+    var action = req.param('action');
+    
+    switch(action){
+        case 'suma':
+            c = (a + b).toString();
+            res.status(200).json({
+                status: true,
+                resultado: c
+            });
+            break;
+        case 'resta':
+            c = (a - b).toString();
+            res.status(200).json({
+                status: true,
+                resultado: c
+            });
+            break;
+        case 'dividir':
+            c = (a / b).toString();
+            res.status(200).json({
+                status: true,
+                resultado: c
+            });
+            break;
+        case 'multi': 
+            c = (a * b).toString();
+            res.status(200).json({
+                status: true,
+                resultado: c
+            });
+            break;
+        default:
+            res.send('no existe');
+    }
 
-// maths.substract = ()=>{
-
-// }
-
-// maths.multi = ()=>{
-
-// }
-
-// maths.division = ()=>{
-
-// }
-
-Maths.greets = ()=>{
-    console.log("Hola desde controladores");
 }
 
-module.exports = Maths;
-
+module.exports = math;
