@@ -4,10 +4,10 @@ const math = {};
 
 
 math.calculator = (req, res)=>{
-    var a = parseInt(req.param('a'));
-    var b = parseInt(req.param('b'));
+    var a = parseInt(req.body.a);
+    var b = parseInt(req.body.b);
     var c = 0;
-    var action = req.param('action');
+    var action = req.body.action;
     
     switch(action){
         case 'suma':
