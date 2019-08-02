@@ -9,17 +9,16 @@ function mandarDatos(url, dato){
     .then(()=>{ })
 }
 
+function send(){
+    
+
+    console.log("Datos enviados");
+}
+
 function obtenerDatos(url){
     axios.get(url)
     .then((res)=>{datos = res; console.log(datos["c"])})
 }
-
-mandarDatos("http://localhost:3000/math", 
-{
-    "a": 12,
-    "b": 15,
-    "action": 1
-});
 
 obtenerDatos("http://localhost:3000/math");
 

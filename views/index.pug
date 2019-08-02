@@ -1,6 +1,13 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
-  p #{message}
+doctype html
+html(lang='en')
+  head
+    title Form
+    script(src='https://code.jquery.com/jquery-3.4.1.min.js')
+    script(src="/js/send.js")
+  body
+    form(method='POST')
+      input#n1(type='number', placeholder='numero1')
+      input#n2(type='number', placeholder='numero2')
+      input#action(type='number', placeholder="Funcion")
+      //- input(type='submit', value='Enviar' id="send")
+      button#send Enviar

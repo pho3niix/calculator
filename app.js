@@ -31,9 +31,9 @@ app.use('/users', usersRouter);
 app.use('/math', mathRouter);
 
 // rutas para index
-app.use('/test', (req, res)=>{
-  res.sendFile(path.resolve('public', '../views/test.html'));
-})
+// app.use('/test', (req, res)=>{
+//   res.sendFile(path.resolve('public', '../views/test.html'));
+// })
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
