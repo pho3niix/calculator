@@ -2,12 +2,11 @@
 
 const math = {};
 
-
 math.calculator = (req, res)=>{
-    var a = parseFloat(req.body.a);
-    var b = parseFloat(req.body.b);
-    var c = 0;
-    var action = req.body.action;
+    var a = parseFloat(req.query.a);
+    var b = parseFloat(req.query.b);
+    var c;
+    var action = req.query.action;
     
     switch(action){
 
@@ -15,7 +14,6 @@ math.calculator = (req, res)=>{
         case 1:
             c = (a + b).toString();
             res.status(200).json({
-                status: true,
                 resultado: c
             });
             break;
@@ -24,7 +22,6 @@ math.calculator = (req, res)=>{
         case 2:
             c = (a - b).toString();
             res.status(200).json({
-                status: true,
                 resultado: c
             });
             break;
@@ -33,7 +30,6 @@ math.calculator = (req, res)=>{
         case 3:
             c = (a / b).toString();
             res.status(200).json({
-                status: true,
                 resultado: c
             });
             break;
@@ -42,7 +38,6 @@ math.calculator = (req, res)=>{
         case 4: 
             c = (a * b).toString();
             res.status(200).json({
-                status: true,
                 resultado: c
             });
             break;
