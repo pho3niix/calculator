@@ -1,29 +1,28 @@
-$(document).ready(function(){
-    $("#send").click(function(event){
-        var n1 = $("#n1").val();
-        var n2 = $("#n2").val();
-        var fn = $("#action").val();
+window.onload = function(){
 
-        var params = {
-            "a": n1,
-            "b": n2,
-            "action": fn
-        };
-        
-        event.preventDefault();
+    var datos;
+    var btn = document.getElementById('send');
 
-        $.ajax({
-            method: "POST",
-            url: "/math/result",
-            data: JSON.stringify(params),
-            dataType: "json",
-            contentType: "application/json"
-        }).done(function(){
-            location.replace("/math/result");
-            console.log(params);
-        }).fail(function(err){
-            console.log(err);
+    btn.addEventListener("click", ()=>{
+
+        var n1 = parseFloat(document.getElementById('n1').value);
+        var n2 = parseFloat(document.getElementById('n2').value);
+        var fn = parseInt(document.getElementById('action').value);
+        var result = document.getElementById('result');
+
+        axios.post('/math/result/', {
+                a: n1,
+                b: n2,
+                fn: fn
         })
-
+        .then((res)=>{
+            datos = res;
+            result.innerHTML = datos.data.resultado;
+            
+        })
+        .catch((err)=>{
+            console.log(datos= err)
+        })
     });
-});
+
+}

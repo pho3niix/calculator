@@ -3,12 +3,14 @@
 const math = {};
 
 math.calculator = (req, res)=>{
-    var a = parseFloat(req.query.a);
-    var b = parseFloat(req.query.b);
+    var a = parseFloat(req.body.a);
+    var b = parseFloat(req.body.b);
     var c;
-    var action = req.query.action;
+    var fn = parseInt(req.body.fn);
+
+    // res.send((a+b).toString());
     
-    switch(action){
+    switch(fn){
 
         // function suma
         case 1:
@@ -42,7 +44,9 @@ math.calculator = (req, res)=>{
             });
             break;
         default:
-            res.send('no existe');
+            res.json({
+                resultado: "Operacion no soportada"
+            });
     }
 
 }
