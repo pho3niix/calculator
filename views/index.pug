@@ -7,9 +7,8 @@ html(lang='en')
     script(src="https://unpkg.com/axios/dist/axios.min.js")
   body
 
-  input#n1(type='number', placeholder='numero1')
-  input#n2(type='number', placeholder='numero2')
-  input#action(type='number', placeholder="Funcion")
-
-  p#result 
-  button#send Enviar
+  input#n1(type='text', placeholder='numero1' onkeypress='return valNum(event)')
+  input#n2(type='text', placeholder='numero2' onkeypress='return valNum(event)')
+  input#action(type='text', placeholder="Funcion" onkeypress='return valNum(event)')
+  button#send Igual
+  p#result

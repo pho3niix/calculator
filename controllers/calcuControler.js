@@ -44,7 +44,7 @@ math.calculator = (req, res)=>{
             });
             break;
         default:
-            res.json({
+            res.status(200).json({
                 resultado: "Operacion no soportada"
             });
     }
