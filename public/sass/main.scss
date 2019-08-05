@@ -2,5 +2,84 @@
     font-family: Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    .calculator{
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+        height: 70vh;
+        border-radius: 30px;
+        box-shadow: 0 0 1vh rgb(0, 0, 0);
+
+        #dis{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25%;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font-size: 8vh;
+
+            #op{
+                text-align: end;
+                width: 90%;
+                height: 50%;
+                font-size: 8vh;
+                outline: none;
+                border: transparent;
+                background-color: rgb(44, 44, 44);
+                color: white;
+                overflow: hidden;
+                &:focus{
+                    outline: none;
+                }
+                &:hover{
+                    outline: none;
+                    border: transparent;
+                }
+            }
+        }
+
+        .nums{
+            height: 75%;
+            width: 100%;
+            background-color: rgb(0, 128, 128);
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+
+            button{
+                width: 7.5vw;
+                height: 10.5vh;
+                font-size: 2vw;
+                border: none;
+                cursor: pointer;
+                &:focus{
+                    outline: none;
+                }
+                &#equal{
+                    border-bottom-right-radius: 30px;
+                }
+                &#del{
+                    width: 22.5vw;
+                }
+                &#cero{
+                    width: 15vw;
+                    border-bottom-left-radius: 30px;
+                }
+            }
+        }
+    }
 }
