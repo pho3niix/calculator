@@ -6,7 +6,7 @@ var calController = require('../controllers/calcuControler');
 router.post('/result', calController.calculator);
 
 router.get('/form', (req, res)=>{
-    res.render('index');
+    res.render('calculator');
 });
 
 

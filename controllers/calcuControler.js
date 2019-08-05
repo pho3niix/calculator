@@ -6,12 +6,12 @@ math.calculator = (req, res)=>{
     var a = parseFloat(req.body.a);
     var b = parseFloat(req.body.b);
     var c;
-    var fn = parseInt(req.body.fn);
+    var fn = req.body.fn;
     
     switch(fn){
 
         // function suma
-        case 1:
+        case 'sum':
             c = (a + b).toString();
             res.status(200).json({
                 resultado: c
@@ -19,7 +19,7 @@ math.calculator = (req, res)=>{
             break;
 
             // function rest
-        case 2:
+        case 'men':
             c = (a - b).toString();
             res.status(200).json({
                 resultado: c
@@ -27,7 +27,7 @@ math.calculator = (req, res)=>{
             break;
 
             // function dividir
-        case 3:
+        case 'divi':
             c = (a / b).toString();
             res.status(200).json({
                 resultado: c
@@ -35,7 +35,7 @@ math.calculator = (req, res)=>{
             break;
 
             // funcion multiplicacion
-        case 4: 
+        case 'multi': 
             c = (a * b).toString();
             res.status(200).json({
                 resultado: c
