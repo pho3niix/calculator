@@ -7,8 +7,6 @@ math.calculator = (req, res)=>{
     var b = parseFloat(req.body.b);
     var c;
     var fn = parseInt(req.body.fn);
-
-    // res.send((a+b).toString());
     
     switch(fn){
 
