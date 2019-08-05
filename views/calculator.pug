@@ -1,0 +1,43 @@
+doctype html
+html(lang='en')
+  head
+    title Calculator
+    script(src='https://code.jquery.com/jquery-3.4.1.min.js')
+    script(src="/js/send.js")
+    script(src="/js/operations.js")
+    link(rel="stylesheet", href="/css/style.css")
+    script(src="https://unpkg.com/axios/dist/axios.min.js")
+  body
+
+  //- input#n1(type='text', placeholder='numero1' onkeypress='return valNum(event)')
+  //- input#n2(type='text', placeholder='numero2' onkeypress='return valNum(event)')
+  //- input#action(type='text', placeholder="Funcion" onkeypress='return valNum(event)')
+  //- button#send Igual
+  //- p#result
+
+  div.main
+    h1 Welcome to the jungle
+    div.calculator
+      div#dis
+        div#op 0
+      div.nums
+        button#del(data-action='clear') AC
+        button#divi.key-op(data-action="divide") /
+        button#siete 7
+        button#ocho 8
+        button#nueve 9
+        button#mul.key-op(data-action="multi") &times;
+        button#cuatro 4
+        button#cinco 5
+        button#seis 6
+        button#men.key-op(data-action="subs") -
+        button#uno 1
+        button#dos 2
+        button#tres 3
+        button#sum.key-op(data-action="add") +
+        button#cero 0
+        button#point(data-action='point') .
+        button#equal(data-action='equal') =
+
+
+  
