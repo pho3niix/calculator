@@ -6,7 +6,7 @@ function valNum(event){
     }
 }
 
-window.onload = function(){
+$(document).ready(function(){
 
     var m1 = document.getElementById('n1');
     var m2 = document.getElementById('n2');
@@ -14,11 +14,12 @@ window.onload = function(){
     var result = document.getElementById('result');
 
     var btn = document.getElementById('send');
+    
     btn.addEventListener("click", ()=>{
 
-        var n1 = parseFloat((m1).value);
-        var n2 = parseFloat((m2).value);
-        var fn = parseInt((m3).value);
+        var n1 = (m1).value;
+        var n2 = (m2).value;
+        var fn = (m3).value;
 
         axios.post('/math/result/', {
                 a: n1,
@@ -34,4 +35,4 @@ window.onload = function(){
         })
     });
 
-}
+});

@@ -6,12 +6,12 @@ math.calculator = (req, res)=>{
     var a = parseFloat(req.body.a);
     var b = parseFloat(req.body.b);
     var c;
-    var fn = req.body.fn;
+    var fn = parseInt(req.body.fn);
     
     switch(fn){
 
         // function suma
-        case 'sum':
+        case 1:
             c = (a + b).toString();
             res.status(200).json({
                 resultado: c
@@ -19,7 +19,7 @@ math.calculator = (req, res)=>{
             break;
 
             // function rest
-        case 'men':
+        case 2:
             c = (a - b).toString();
             res.status(200).json({
                 resultado: c
@@ -27,7 +27,7 @@ math.calculator = (req, res)=>{
             break;
 
             // function dividir
-        case 'divi':
+        case 3:
             c = (a / b).toString();
             res.status(200).json({
                 resultado: c
@@ -35,7 +35,7 @@ math.calculator = (req, res)=>{
             break;
 
             // funcion multiplicacion
-        case 'multi': 
+        case 4: 
             c = (a * b).toString();
             res.status(200).json({
                 resultado: c
@@ -43,7 +43,7 @@ math.calculator = (req, res)=>{
             break;
         default:
             res.status(200).json({
-                resultado: "Operacion no soportada"
+                resultado: "Syntax Error"
             });
     }
 
