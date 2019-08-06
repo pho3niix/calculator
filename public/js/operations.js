@@ -2,7 +2,6 @@ $(document).ready(function(){
     var keys = document.querySelector('.nums');
     var display = document.querySelector('#op');
     var datos = {};
-    var fn = {};
     var params = {};
 
     keys.addEventListener("click", e=>{
@@ -20,6 +19,7 @@ $(document).ready(function(){
             }else{
                 display.textContent = disNum + keyContent;
             }
+
         }else if(action=='men' || action=='sum' || action=='multi' || action=='divi'){
             var first = display.textContent;
             val = key.getAttribute("value");
@@ -28,15 +28,15 @@ $(document).ready(function(){
                 fn: val
             }
             display.textContent = 0;
+            console.log(params);
+
         }
 
         if(action == 'equal'){
-
             if(display.textContent == 0){
                 console.log('nothing');
             }else{
                 var second = display.textContent;
-
                 datos = {
                     a: params.a,
                     b: second,
@@ -56,7 +56,9 @@ $(document).ready(function(){
         }else if(action== 'clear'){
             display.textContent = 0;
         }else if(action=='point'){
-            display.textContent = disNum + '.';
+            if(!display.textContent.includes('.')){
+                display.textContent = disNum + '.';
+            }
         }
 
     });

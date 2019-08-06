@@ -48,6 +48,8 @@
                 background-color: rgb(44, 44, 44);
                 color: rgb(255, 255, 255);
                 overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
                 &:focus{
                     outline: none;
                 }
