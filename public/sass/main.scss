@@ -24,7 +24,7 @@
         height: 70vh;
         border-radius: 30px;
         box-shadow: 0 0 1vh rgb(0, 0, 0);
-        background-color: rgb(255, 255, 255);
+        background-color: teal;
 
         #dis{
             display: flex;
@@ -35,8 +35,6 @@
             border-top-left-radius: 30px;
             border-top-right-radius: 30px;
             background-color: rgb(44, 44, 44);
-            color: rgb(255, 255, 255);
-            font-size: 8vh;
 
             #op{
                 text-align: end;
@@ -73,12 +71,10 @@
                 border: none;
                 cursor: pointer;
                 transition: .3s;
-                border-radius: 30px;
 
                 &:hover{
                     background-color: rgb(128, 128, 128);
                     color: white;
-                    // box-shadow: 0 0 1vh black;
                 }
 
                 &:focus{
