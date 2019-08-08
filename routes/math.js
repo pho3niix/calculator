@@ -3,9 +3,9 @@ var router = express.Router();
 
 var calController = require('../controllers/calcuControler');
 
-router.post('/result', calController.calculator);
+router.post('/operations', calController.calculator);
 
-router.get('/form', (req, res)=>{
+router.get('/calculator', (req, res)=>{
     res.render('calculator');
 });
 

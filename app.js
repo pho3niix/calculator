@@ -6,8 +6,8 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+// var indexRouter = require('./routes/index');
+// var usersRouter = require('./routes/users');
 var mathRouter = require('./routes/math');
 
 var app = express();
@@ -26,9 +26,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // definir rutas
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/math', mathRouter);
+// app.use('/', indexRouter);
+// app.use('/users', usersRouter);
+app.use('/', mathRouter);
 
 // rutas para index
 // app.use('/test', (req, res)=>{
