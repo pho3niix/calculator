@@ -10,7 +10,7 @@ $(document).ready(function(){
         var action = key.dataset.action;
         var keyContent =  key.textContent;
         var disNum = display.textContent;
-        var val;
+        var fn;
         var first;
 
         if(!action){
@@ -24,10 +24,10 @@ $(document).ready(function(){
 
         }else if(action=='men' || action=='sum' || action=='multi' || action=='divi'){
             var first = display.textContent;
-            val = key.getAttribute("value");
+            fn = key.getAttribute("value");
             params = {
                 a: first,
-                fn: val
+                fn: fn
             }
             display.textContent = 0;
         }
@@ -44,20 +44,20 @@ $(document).ready(function(){
                     fn: params.fn   
                 }
 
-                axios.post('/math/result/', datos)
+                axios.post('/operations/', datos)
                 .then((res)=>{
 
-                    var data = res.data.resultado;
-                    if(data.length>10){
-                        display.textContent = "Don't supp"
+                    var result = res.data.resultado;
+                    
+                    if(result.toString().length>10){
+                        display.textContent = "Not supp"
                     }else{
-                        display.textContent = data;
-                        console.log(data);
+                        display.textContent = result;
                     }
 
                 })
                 .catch((err)=>{
-                    console.log(datos= err)
+                    console.log(err)
                 })
             }
 
