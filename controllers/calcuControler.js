@@ -12,7 +12,7 @@ math.calculator = (req, res)=>{
 
         // function suma
         case 1:
-            c = (a + b).toString();
+            c = parseFloat(a + b);
             res.status(200).json({
                 resultado: c
             });
@@ -20,7 +20,7 @@ math.calculator = (req, res)=>{
 
             // function rest
         case 2:
-            c = (a - b).toString();
+            c = parseFloat(a - b);
             res.status(200).json({
                 resultado: c
             });
@@ -28,7 +28,7 @@ math.calculator = (req, res)=>{
 
             // function dividir
         case 3:
-            c = (a / b).toString();
+            c = parseFloat(a / b);
             res.status(200).json({
                 resultado: c
             });
@@ -36,7 +36,7 @@ math.calculator = (req, res)=>{
 
             // funcion multiplicacion
         case 4: 
-            c = (a * b).toString();
+            c = parseFloat(a * b);
             res.status(200).json({
                 resultado: c
             });
