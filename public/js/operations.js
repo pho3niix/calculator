@@ -56,6 +56,15 @@ $(document).ready(function(){
                     }
 
                 })
+                /**
+                 * if(result.toString().includes('.')){
+                        display.textContent = (result.toFixed(4)).toString().substring(0, 10);
+                    }else if(result.toString().length>10){
+                        display.textContent = (result.toExponential(2)).toString().substring(0,10);
+                    }else{
+                        display.textContent = result;
+                    }
+                 */
                 .catch((err)=>{
                     console.log(err)
                 })
