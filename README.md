@@ -2,10 +2,10 @@
 calculator using node.js and expres.js
 
 ## Cambios en tiempo real de Sass a Css
-`sass --watch  public/sass/main.scss public/css/style.css --style compressed`
+`npm run w-sass`
 
 ## Compilar Sass a Css
-`sass public/sass/main.scss public/css/style.css --style compressed`
+`npm run c-sass`
 
-## Correr servidor
+## Iniciar servidor
 `npm run init`
